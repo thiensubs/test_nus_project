@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+#lang
+{
+  float:right;
+}
+#error_explanation
+{
+  border-color: red;
+  border-style: solid;
+  color: yellow;
+}
+.container-fluid
+{
+  vertical-align: middle;
+}
+
+.nav
+{
+  vertical-align: middle;
+}

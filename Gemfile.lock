@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/amatsuda/kaminari.git
+  revision: 06b801681002b3a13894ba763dcd11678481f275
+  specs:
+    kaminari (0.15.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -147,6 +155,7 @@ DEPENDENCIES
   friendly_id
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari!
   mysql2
   paperclip
   rails (= 4.1.1)

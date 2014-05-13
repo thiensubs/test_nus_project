@@ -42,4 +42,5 @@ gem 'twitter-bootstrap-rails'
 gem 'friendly_id'
 gem 'bcrypt-ruby', :require=>'bcrypt'
 gem 'devise'
+gem 'kaminari', github: 'amatsuda/kaminari'
 
