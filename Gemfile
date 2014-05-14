@@ -43,4 +43,5 @@ gem 'friendly_id'
 gem 'bcrypt-ruby', :require=>'bcrypt'
 gem 'devise'
 gem 'kaminari', github: 'amatsuda/kaminari'
+gem 'rails-timeago', '~> 2.0'
 

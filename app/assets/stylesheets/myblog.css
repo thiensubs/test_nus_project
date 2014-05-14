@@ -2,3 +2,55 @@
 {
   text-align: center;
 }
+#content
+{
+  text-align: center;
+  margin: 0px auto;
+}
+
+#pa_ge
+{
+  clear: both;
+  position: relative;
+  float: left;
+}
+
+.comment_a
+{
+
+  outline: 10px dotted #2020a6; outline-offset: 10px;
+
+}
+#comment
+{
+  float: left;clear: both;
+  width: 100%;
+}
+#navbar_inner
+{
+  border: 0px;
+  background: rgb(34,34,34);
+  border-radius: 0px;
+
+}
+.table thead th
+{
+  text-align: center;
+}
+/*Profile CSS*/
+#profile_title
+{
+  text-align: center;
+}
+.profile
+{
+  text-align: center;
+  left: 50%;
+  margin:0 auto;
+}
+/*Post CSS*/
+#posts
+{
+  border: 2px solid;
+  border-radius: 2px;
+}

@@ -1,15 +1,16 @@
-<p>
-  <strong>Title of Comment:</strong>
-  <%= comment.title_comment %>
-</p>
-
-<p>
-  <strong>Content of Comment:</strong>
-  <%= comment.content_comment %>
-</p>
-
-<p>
-  <%= link_to 'Destroy Comment', [comment.post, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+<div class="comment_sample">
+  <p>----#<%= comment.id %>-----<%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %></p>
+  <p>
+    <strong>Title of Comment:</strong>
+    <%= comment.title_comment %>
+  </p>
+  <p>
+    <strong>Content of Comment:</strong>
+    <%= comment.content_comment %>
+  </p>
+  <p>
+    <%= link_to 'Destroy Comment', [comment.post, comment],
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
+  </p>
+</div>
