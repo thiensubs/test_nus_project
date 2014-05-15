@@ -34,6 +34,21 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
+  config.action_mailer.raise_delivery_errors = true
+
+# set delivery method to :smtp, :sendmail or :test
+config.action_mailer.delivery_method = :smtp
+
+# these options are only needed if you choose smtp delivery
+config.action_mailer.smtp_settings = {
+  :address        => 'mx1.hostinger.vn',
+  :port           => 2525,
+  :domain         => 'Test NUS',
+  :authentication => :login,
+  :user_name      => 'testabc@sharepasswifi.tk',
+  :password       => '5454009'
+}
 
 end

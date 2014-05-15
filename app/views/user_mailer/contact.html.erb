@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h1>Hi <%= @post.user.email %>,</h1>
+  <p>
+    You has a new comment for Post ID: <%= @post.id %>,<br>
+  </p>
+  <p>
+    New comment is: <%= @url %>.
+  </p>
+  <p>
+   --------------------------------------------------------<br>
+   ID: <%= @post.comments.last.id %><br>
+   Title: <%= @post.comments.last.title_comment %><br>
+   Content: <%= @post.comments.last.content_comment %><br>
+   --------------------------------------------------------<br>
+ </p>
+ <p>This is mailer system, don't reply...<br>
+  Mails was sent at: <%= Time.now %>
+</p>
+<p>Thanks for joining and have a great day!</p>
+</body>
+</html>

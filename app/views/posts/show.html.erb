@@ -12,7 +12,7 @@
 
     <blockquote class="blockquote">
       <h1><%= @post.title %></h1>
-      <footer><%= @post.created_at %></footer>
+      <footer><%= @post.created_at.strftime("%d %B %Y") %></footer>
     </blockquote>
 
   </div>

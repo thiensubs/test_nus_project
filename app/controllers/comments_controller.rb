@@ -12,6 +12,8 @@ class CommentsController < ApplicationController
   def show
   end
 
+
+
   # GET /comments/new
   def new
     @comment = Comment.new
@@ -27,7 +29,7 @@ class CommentsController < ApplicationController
 
     @post = Post.friendly.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
-    @comments = @post.comments.page(params[:page]).per(2)
+    @comments = @post.comments.order("created_at DESC").page(params[:page]).per(2)
     #flash[:notice] = "Thank you for commenting this post"
     # redirect_to post_path(@post)
 
@@ -42,10 +44,13 @@ class CommentsController < ApplicationController
     #     format.json { render json: @comment.errors, status: :unprocessable_entity }
     #   end
     # end
+
     respond_to do |format|
       format.html { redirect_to @comment.post }
       format.js {}
+      UserMailer.contact(@post).deliver
     end
+
   end
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
@@ -83,4 +88,5 @@ class CommentsController < ApplicationController
     def comment_params
       params[:comment].permit(:title_comment, :content_comment).merge(user_id: current_user.id)
     end
+
   end

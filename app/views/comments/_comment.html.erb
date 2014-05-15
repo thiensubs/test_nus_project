@@ -1,20 +1,27 @@
 <div class="comment_sample">
   <span class="glyphicon glyphicon-tree-conifer"></span>
   ----#<%= comment.id %> <small> Created at: <%= comment.created_at %></small>--- by
-  <span class="label label-default"><%= User.find(comment.user_id).email %></span>
-  <p>
-    <strong>Title of Comment:</strong>
-    <%= comment.title_comment %>
-  </p>
-  <p>
-    <strong>Content of Comment:</strong>
-    <%= comment.content_comment %>
-  </p>
-  <p>
-    <span class="glyphicon glyphicon-fire"></span>
-    <%= link_to 'Destroy Comment', [comment.post, comment],
-    method: :delete,
-    data: { confirm: 'Are you sure?' } %>
-  </p>
-  Last time you visited:<%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %>
-</div>
+  <span class="label label-default">
+    <% unless comment.user_id.blank? %>
+    <%  @user=User.find(comment.user_id)%>
+    <% unless @user.blank? %>
+    <%= @user.email %>
+    <% end %>
+    <% end %></span>
+
+    <p>
+      <strong>Title of Comment:</strong>
+      <%= comment.title_comment %>
+    </p>
+    <p>
+      <strong>Content of Comment:</strong>
+      <%= comment.content_comment %>
+    </p>
+    <p>
+      <span class="glyphicon glyphicon-fire"></span>
+      <%= link_to 'Destroy Comment', [comment.post, comment],
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+    </p>
+    Last time you visited:<%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %>
+  </div>

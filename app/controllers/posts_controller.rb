@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   def show
 
     @post = Post.friendly.find(params[:id])
-    @comments=@post.comments.page(params[:page]).per(2)
+    @comments=@post.comments.order("created_at DESC").page(params[:page]).per(2)
     if request.path != post_path(@post)
       redirect_to @post, status: :moved_permanently
     end
