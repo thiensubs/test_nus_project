@@ -1,5 +1,9 @@
+
 <div class="comment_sample">
-  <p>----#<%= comment.id %>-----<%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %></p>
+  <span class="glyphicon glyphicon-tree-conifer"></span>
+  <%= debug  %>
+  ----#<%= index+1%> <small> Created at: <%= comment.created_at %></small>---
+  Last time you visited:<%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %>
   <p>
     <strong>Title of Comment:</strong>
     <%= comment.title_comment %>
@@ -9,8 +13,9 @@
     <%= comment.content_comment %>
   </p>
   <p>
-    <%= link_to 'Destroy Comment', [comment.post, comment],
-    method: :delete,
-    data: { confirm: 'Are you sure?' } %>
-  </p>
-</div>
+    <span class="glyphicon glyphicon-fire"></span>
+      <%= link_to 'Destroy Comment', [comment.post, comment],
+      method: :delete,
+      data: { confirm: 'Are you sure?' } %>
+    </p>
+  </div>

@@ -4,21 +4,25 @@
 }
 #content
 {
-  text-align: center;
-  margin: 0px auto;
+  /*text-align: center;
+  margin: 0px auto;*/
 }
 
 #pa_ge
 {
+/*  clear: both;
+  position: relative;
+  float: left;*/
+}
+.comment
+{
   clear: both;
   position: relative;
-  float: left;
 }
-
 .comment_a
 {
-
-  outline: 10px dotted #2020a6; outline-offset: 10px;
+/*
+  outline: 10px dotted #2020a6; outline-offset: 10px;*/
 
 }
 #comment
@@ -33,7 +37,7 @@
   border-radius: 0px;
 
 }
-.table thead th
+.table thead th th th
 {
   text-align: center;
 }

@@ -15,9 +15,22 @@
         <td><%= post.id %></td>
         <td><%= post.title %></td>
         <td><%= post.comments.count %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to post do %>
+          <button class="btn btn-info" type="button">Show</button>
+          <% end %>
+        </td>
+        <% if can? :update, post %>
+        <td><%= link_to edit_post_path(post) do %>
+          <button class="btn btn-default" type="button">Edit</button>
+
+          <% end %>
+        </td>
+        <% end %>
+        <td>
+          <%= link_to post, method: :delete, data: {confirm: 'Are you sure?'} do %>
+          <button type="button" class="btn btn-danger">Destroy</button>
+          <% end %>
+        </td>
       </tr>
       <% end %>
 
@@ -26,7 +39,7 @@
 </div>
 <br>
 <%= link_to new_post_path do %>
-<p><i class=" icon-plus-sign"></i> New Post</p>
+<p><i class="icon-plus-sign"></i> New Post</p>
 <% end %>
 
 <div class="page">

@@ -12,8 +12,13 @@
  *
  *= require_tree .
  *= require_self
- */
- html,body{
+
+ *= require bootstrap
+ *= require bootstrap.min
+ *= require bootstrap-theme.min
+*/
+
+html,body{
   height: 100%;
   margin : 0;
   padding : 0;
@@ -22,18 +27,18 @@
 #wrapper
 {
   min-height:100%;
-/*  padding-bottom: -20px;*/
+  /*  padding-bottom: -20px;*/
 }
 #footer
 {
   clear: both;
-/*  padding: 0;*/
+  /*  padding: 0;*/
   clear:both;
   text-align: center;
   border-top : 5px solid #015990;
   /*padding : 5px;*/
   width: 100%;
-/*margin-top: 20px;*/
+  /*margin-top: 20px;*/
   height: 20px;
 
 }

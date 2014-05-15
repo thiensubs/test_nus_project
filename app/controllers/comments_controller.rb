@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:show, :index]
   # GET /comments
   # GET /comments.json
   # def index
@@ -69,6 +69,7 @@ class CommentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
       @comment = Comment.find(params[:id])
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

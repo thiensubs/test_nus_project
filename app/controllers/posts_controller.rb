@@ -1,16 +1,22 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, :except => [:show, :index]
   # GET /posts
   # GET /posts.json
+
   def index
-    @posts = Post.order("created_at").page(params[:page]).per(10)
+
+
+      @posts = Post.order("created_at").page(params[:page]).per(10)
+
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+
     @post = Post.friendly.find(params[:id])
+    @comments=@post.comments.page(params[:page]).per(2)
     if request.path != post_path(@post)
       redirect_to @post, status: :moved_permanently
     end
@@ -74,7 +80,8 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params[:post].permit(:title, :content)
+
+      params[:post].permit(:title, :content).merge(user_id: current_user.id)
 
     end
-end
+  end

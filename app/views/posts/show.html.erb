@@ -1,25 +1,53 @@
 <p id="notice"><%= notice %></p>
+<div class="clear">
+  <%= link_to edit_post_path(@post) do%>
+  <span class="glyphicon glyphicon-pencil"> Edit</span>
+  <% end %> |
+  <%= link_to posts_path do %>
+  <span class="glyphicon glyphicon-hand-left"> Back</span>
+  <% end %>
+</div>
+<div id="content" class="panel panel-info">
+  <div id="pa_ge" class="panel-heading">
 
-<div id="content">
-  <h1><%= @post.title %></h1>
-  <div id="pa_ge">
-    <div id="posts">
-      <p>
-        <strong>Content:</strong>
-        <%= @post.content %>
-      </p>
+    <blockquote class="blockquote">
+      <h1><%= @post.title %></h1>
+      <footer><%= @post.created_at %></footer>
+    </blockquote>
+
+  </div>
+  <div class="panel-body">
+    <p>
+      <strong>Content:</strong>
+      <%= @post.content %>
+    </p>
+  </div>
+</div>
+
+<div id="comment" class="panel panel-danger">
+  <div id="pa_ge" class="panel-heading">
+    <h2><%= @post.comments.count %> Comments</h2>
+  </div>
+  <div class="panel-body">
+    <div class="row-fluid">
+      <div class="span8">
+        <% @comments.each_with_index do |comment, index| %>
+        <%= render comment, index: index %>
+        <% end %>
+        <div class="page">
+          <%= paginate @comments %>
+        </div>
+      </div><!--/span-->
+      <div class="span4">
+        <div class="comment">
+          <h2>Add a comment:</h2>
+          <%= render "comments/form" %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<div id="comment">
-  <div class="comment_a">
-    <h3>Comments</h3>
-    <%= render @post.comments %>
-  </div>
-  <h2>Add a comment:</h2>
-  <%= render "comments/form" %>
-</div>
-<div class="clear">
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-</div>
+
+
+
+
