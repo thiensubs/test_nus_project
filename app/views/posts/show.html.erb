@@ -24,20 +24,24 @@
   </div>
 </div>
 
-<div id="comment" class="panel panel-danger">
+<div class="panel panel-danger">
   <div id="pa_ge" class="panel-heading">
-    <h2><%= @post.comments.count %> Comments</h2>
+    <h2 id="comments_count"><%= pluralize(@post.comments.count, "Comment") %></h2>
   </div>
   <div class="panel-body">
     <div class="row-fluid">
       <div class="span8">
-        <% @comments.each_with_index do |comment, index| %>
-        <%= render comment, index: index %>
-        <% end %>
-        <div class="page">
-          <%= paginate @comments %>
-        </div>
-      </div><!--/span-->
+        <div id="reviews">
+          <div id="comment">
+            <%= render @comments %>
+          </div>
+
+
+          <div class="page">
+            <%= paginate @comments %>
+          </div>
+        </div><!--/span-->
+      </div>
       <div class="span4">
         <div class="comment">
           <h2>Add a comment:</h2>

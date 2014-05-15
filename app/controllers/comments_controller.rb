@@ -24,9 +24,13 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
+
     @post = Post.friendly.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
-    redirect_to post_path(@post)
+    @comments = @post.comments.page(params[:page]).per(2)
+    #flash[:notice] = "Thank you for commenting this post"
+    # redirect_to post_path(@post)
+
     # @comment = Comment.new(comment_params)
 
     # respond_to do |format|
@@ -38,8 +42,11 @@ class CommentsController < ApplicationController
     #     format.json { render json: @comment.errors, status: :unprocessable_entity }
     #   end
     # end
+    respond_to do |format|
+      format.html { redirect_to @comment.post }
+      format.js {}
+    end
   end
-
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
   def update
@@ -74,6 +81,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params[:comment].permit(:title_comment, :content_comment)
+      params[:comment].permit(:title_comment, :content_comment).merge(user_id: current_user.id)
     end
-end
+  end

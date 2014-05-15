@@ -1,9 +1,7 @@
-
 <div class="comment_sample">
   <span class="glyphicon glyphicon-tree-conifer"></span>
-  <%= debug  %>
-  ----#<%= index+1%> <small> Created at: <%= comment.created_at %></small>---
-  Last time you visited:<%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %>
+  ----#<%= comment.id %> <small> Created at: <%= comment.created_at %></small>--- by
+  <span class="label label-default"><%= User.find(comment.user_id).email %></span>
   <p>
     <strong>Title of Comment:</strong>
     <%= comment.title_comment %>
@@ -14,8 +12,9 @@
   </p>
   <p>
     <span class="glyphicon glyphicon-fire"></span>
-      <%= link_to 'Destroy Comment', [comment.post, comment],
-      method: :delete,
-      data: { confirm: 'Are you sure?' } %>
-    </p>
-  </div>
+    <%= link_to 'Destroy Comment', [comment.post, comment],
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
+  </p>
+  Last time you visited:<%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %>
+</div>
