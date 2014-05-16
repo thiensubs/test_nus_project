@@ -14,8 +14,6 @@
  *= require_self
 
  *= require bootstrap
- *= require bootstrap.min
- *= require bootstrap-theme.min
 */
 
 html,body{

@@ -16,4 +16,4 @@
 //= require_tree .
 //= require rails-timeago
 //= require rails-timeago-all
-//= requere bootstrap
+//= require bootstrap
