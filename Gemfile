@@ -1,10 +1,19 @@
 source 'https://rubygems.org'
 
-
+group :development, :test do
+  gem 'mysql2'
+  gem 'rspec-rails'
+end
+group :production do
+ gem 'pg'
+end
+group :test   do
+   gem 'mysql2'
+end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-gem 'mysql2'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -46,4 +55,7 @@ gem 'kaminari', github: 'amatsuda/kaminari'
 gem 'rails-timeago', '~> 2.0'
 gem "cancan"
 gem 'i18n-js'
+
+gem 'rails_12factor', group: :production
+gem 'unicorn'
 

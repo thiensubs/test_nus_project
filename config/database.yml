@@ -5,16 +5,18 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
+
   pool: 5
   timeout: 5000
-  host: localhost
-  username: root
-  password: root
+
 
 development:
   <<: *default
+  adapter: mysql2
   database: test_nus
+  host: localhost
+  username: root
+  password: root
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,4 +27,11 @@ test:
 
 production:
   <<: *default
-  database: test_nus
+  adapter: postgresql
+  encoding: unicode
+  database: d362elvd39kc7t
+  host: ec2-23-23-244-144.compute-1.amazonaws.com
+  port:  5432
+  username: zaswemyvtxilpf
+  password: 0YDel3pATsYYHOIbJS6bvoyVu6
+

@@ -80,4 +80,19 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.action_mailer.default_url_options = { host: 'hostinger.vn' }
+  config.action_mailer.raise_delivery_errors = true
+
+# set delivery method to :smtp, :sendmail or :test
+config.action_mailer.delivery_method = :smtp
+
+# these options are only needed if you choose smtp delivery
+config.action_mailer.smtp_settings = {
+  :address        => 'mx1.hostinger.vn',
+  :port           => 2525,
+  :domain         => 'Test NUS',
+  :authentication => :login,
+  :user_name      => 'testabc@sharepasswifi.tk',
+  :password       => '5454009'
+}
 end
