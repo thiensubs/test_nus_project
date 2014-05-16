@@ -47,7 +47,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'paperclip'
-gem 'twitter-bootstrap-rails'
+# gem 'twitter-bootstrap-rails'
 gem 'friendly_id'
 gem 'bcrypt-ruby', :require=>'bcrypt'
 gem 'devise'
