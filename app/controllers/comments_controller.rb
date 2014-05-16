@@ -48,7 +48,8 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to @comment.post }
       format.js {}
-      UserMailer.contact(@post).deliver
+      @current_url = post_url(@post)
+      UserMailer.contact(@post,@current_url).deliver
     end
 
   end

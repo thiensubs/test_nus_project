@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div class="clear">
   <%= link_to edit_post_path(@post) do%>
-  <span class="glyphicon glyphicon-pencil"> Edit</span>
+  <span class="glyphicon glyphicon-pencil"> <%= t("Edit")%> </span>
   <% end %> |
   <%= link_to posts_path do %>
-  <span class="glyphicon glyphicon-hand-left"> Back</span>
+  <span class="glyphicon glyphicon-hand-left"> <%= t("Back")%></span>
   <% end %>
 </div>
 <div id="content" class="panel panel-info">

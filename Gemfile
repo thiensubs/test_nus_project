@@ -45,4 +45,5 @@ gem 'devise'
 gem 'kaminari', github: 'amatsuda/kaminari'
 gem 'rails-timeago', '~> 2.0'
 gem "cancan"
+gem 'i18n-js'
 

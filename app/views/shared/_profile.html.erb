@@ -1,6 +1,6 @@
 <div class="well sidebar-nav">
   <ul class="nav nav-list">
-    <li id="profile_title" class="nav-header">Profile</li>
+    <li id="profile_title" class="nav-header"><%=t("Profile") %></li>
     <div class="profile">
 
 
@@ -14,7 +14,7 @@
       <% end %>
       <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "100px", :height => "100px") %>
       <blockquote>
-        <p class="lead">Slogan here, just do it later</p>
+        <p class="lead"><%= t("slogan") %></p>
       </blockquote>
     </div>
   </ul>

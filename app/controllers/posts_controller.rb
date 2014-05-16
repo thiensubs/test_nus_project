@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-
+     # logger.debug request.url
     @post = Post.friendly.find(params[:id])
     @comments=@post.comments.order("created_at DESC").page(params[:page]).per(2)
     if request.path != post_path(@post)
