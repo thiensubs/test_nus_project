@@ -37,77 +37,86 @@
       <%= javascript_include_tag "application" %>
 
     </head>
+
+
+
+
+
     <body>
-      <div id="wrapper">
-        <div id="top" class="navbar navbar-fluid-top">
-          <div id="navbar_inner" class="navbar-inner">
-            <div class="container-fluid">
-              <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </a>
-              <a class="brand" href="../">Blog</a>
-              <div class="container-fluid nav-collapse">
-                <ul class="nav">
-                  <div class="navbar-text">
-                    <span class="glyphicon glyphicon-briefcase"><%= link_to t("Profile"), "/users/edit" %></span>
-                  </div>
-                </ul>
-
-                <ul class="nav">
-                  <div id="user_nav" class="navbar-text">
-                   <% if user_signed_in? %>
-
-                   <%=t("sign_msg", :email => current_user.email )%>
-                   <%= link_to t("sign_out"), destroy_user_session_path %>
-                   <% else %>
-                   <%= link_to t("sign_up"), new_user_registration_path %> |
-                   <%= link_to t("sign_in"), new_user_session_path %>
-                   <% end %>
-                 </div>
-               </ul>
-               <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default btn-xs">Search Now...</button>
-              </form>
-              <ul class="nav" id="lang">
-                <li>
-                  <%= link_to "/?locale=vi" do %>
-                  <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "25px") %>
-                  <p>VIE</p>
-                  <% end %>
-                </li>
-                <li>
-                  <%= link_to "/?locale=en" do %>
-                  <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "25px") %>
-                  <p>ENG</p>
-                  <% end %>
-                </li>
-              </ul>
-            </div><!--/.nav-collapse -->
+     <div id="wrapper">
+      <div role="navigation" class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="" class="navbar-brand">Blog</a>
           </div>
-        </div>
-      </div>
-      <div id="mid" class="container-fluid">
-        <div class="row-fluid">
-          <div class="span3">
-            <%=render partial: "shared/profile"  %>
-          </div><!--/span-->
-          <div class="span9">
-            <div class="alert alert-success">
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="/users/edit"> <span class="glyphicon glyphicon-briefcase"></span><%= t("Profile") %></a></li>
+              <li><a href="#">Help</a></li>
+              <% if user_signed_in? %>
 
-            </div>
-            <%= yield %>
+              <li id="current_user" class="divider">
+              <%=t("sign_msg", :email => current_user.email )%>
+              </li>
+
+              <li>
+                <%= link_to t("sign_out"), destroy_user_session_path %>
+              </li>
+
+              <% else %>
+              <li>
+              <%= link_to t("sign_up"), new_user_registration_path %>
+              </li>
+              <li>
+                <%= link_to t("sign_in"), new_user_session_path %>
+                <% end %>
+              </li>
+
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="lang">
+              <li>
+                <%= link_to "/?locale=vi" do %>
+                <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "25px") %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "/?locale=en" do %>
+                <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "25px") %>
+                <% end %>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-right">
+              <input type="text" placeholder="Search..." class="form-control">
+            </form>
           </div>
         </div>
       </div>
 
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 sidebar">
+            <ul class="nav nav-sidebar">
+             <%=render partial: "shared/profile"  %>
+           </ul>
+         </div>
+         <div class="col-sm-9">
+          <div class="alert alert-success">
+          </div>
+          <%= yield %>
+        </div>
+      </div>
     </div>
-    <div id="footer" class="navbar navbar-default">
-     &copy;Blog By ThienSuBS 2014
-   </div> <!-- /container -->
- </body>
- </html>
+  </div>
+  <div id="footer" class="navbar navbar-default">
+   &copy;Blog By ThienSuBS 2014
+ </div> <!-- /container -->
+</body>
+
+</html>

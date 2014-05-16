@@ -2,4 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to posts_path do %>
+<span class="glyphicon glyphicon-hand-left"><%= t("Back")%></span>
+<% end%>

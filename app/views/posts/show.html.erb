@@ -30,19 +30,17 @@
   </div>
   <div class="panel-body">
     <div class="row-fluid">
-      <div class="span8">
+      <div class="col-sm-8">
         <div id="reviews">
           <div id="comment">
             <%= render @comments %>
           </div>
-
-
           <div class="page">
             <%= paginate @comments %>
           </div>
         </div><!--/span-->
       </div>
-      <div class="span4">
+      <div class="col-sm-4">
         <div class="comment">
           <h2>Add a comment:</h2>
           <%= render "comments/form" %>
