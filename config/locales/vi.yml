@@ -27,6 +27,7 @@ vi:
   update: "Cập nhật"
   resend_confirm: "Gởi xác nhận kích hoạt"
   help: "Giúp đỡ"
+  edit_post: "Chỉnh sửa bài viết"
   date:
     formats:
       default: "%d.%m.%Y"

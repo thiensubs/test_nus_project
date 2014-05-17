@@ -21,10 +21,17 @@ $(document).ready(function() {
           user_email: {
             required: true,
             email: true
+          },
+          user_password:
+          {
+            required: true
           }
 
         },
         messages: {
+          user_password: {
+            required: "Please enter the password"
+          },
 
           user_email: {
             required: "*Please enter your email",
@@ -40,14 +47,14 @@ $(document).ready(function() {
           // errorPlacement: function(error, element) {
           //               error.appendTo("div#errors");
           //           },
-          errorPlacement: function(error, element) {
-            if ( element.is(":radio") )
-              error.appendTo( element.parent().next().next() );
-            else if ( element.is(":checkbox") )
-              error.appendTo ( $("#here"));
-            else
-              error.appendTo( element.parent());
-          },
+          // errorPlacement: function(error, element) {
+          //   if ( element.is(":radio") )
+          //     error.appendTo( element.parent().next().next() );
+          //   else if ( element.is(":checkbox") )
+          //     error.appendTo ( $("#here"));
+          //   else
+          //     error.appendTo( element.parent());
+          // },
           onfocusout: false,
 
           highlight: function (element) {
