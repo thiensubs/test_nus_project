@@ -48,6 +48,7 @@ en:
   update: "Update"
   resend_confirm: "Resend confirmation instructions"
   help: "Help"
+  edit_post: "Editing post"
   date:
     formats:
       default: "%d.%m.%Y"
