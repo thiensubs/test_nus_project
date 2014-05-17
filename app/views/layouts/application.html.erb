@@ -57,8 +57,8 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-              <li><a href="/users/edit"> <span class="glyphicon glyphicon-briefcase"></span><%= t("Profile") %></a></li>
-              <li><a href="#">Help</a></li>
+              <li><a href="/users/edit" class="btn btn-small"> <span class="glyphicon glyphicon-briefcase"></span><%= t("Profile") %></a></li>
+              <li><a href="#" class="btn btn-small">Help</a></li>
               <% if user_signed_in? %>
 
               <li id="current_user" class="divider">
@@ -66,15 +66,15 @@
               </li>
 
               <li>
-                <%= link_to t("sign_out"), destroy_user_session_path %>
+                <%= link_to t("sign_out"), destroy_user_session_path, class: "btn btn-small" %>
               </li>
 
               <% else %>
               <li>
-              <%= link_to t("sign_up"), new_user_registration_path %>
+              <%= link_to t("sign_up"), new_user_registration_path, class: "btn btn-small" %>
               </li>
               <li>
-                <%= link_to t("sign_in"), new_user_session_path %>
+                <%= link_to t("sign_in"), new_user_session_path, class: "btn btn-small" %>
                 <% end %>
               </li>
 
