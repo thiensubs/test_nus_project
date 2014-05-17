@@ -52,8 +52,7 @@ gem 'devise'
 gem 'kaminari', github: 'amatsuda/kaminari'
 gem 'rails-timeago', '~> 2.0'
 gem "cancan"
-gem 'i18n-js'
-
+gem "i18n-js"
 gem 'rails_12factor', group: :production
 gem 'unicorn'
 

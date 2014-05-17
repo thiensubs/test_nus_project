@@ -1,0 +1,16 @@
+vi:
+  helpers:
+    actions: "Actions"
+    links:
+      back: "Quay lại"
+      cancel: "Hủy"
+      confirm: "Bạn có chắc muốn xóa?"
+      destroy: "Xóa"
+      new: "Tạo mới"
+      edit: "Chỉnh sửa"
+    titles:
+      edit: "Chỉnh sửa %{model}"
+      save: "Lưu %{model}"
+      new: "Taọ mới %{model}"
+      delete: "Xóa %{model}"
+      sign_up: "Đăng ký"

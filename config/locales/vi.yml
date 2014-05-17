@@ -18,4 +18,32 @@ vi:
   Control: "Điều khiển"
   Created At: "Tạo vào lúc"
   Listingposts: "Danh sách các bài viết"
-  confirm: "Ban co chac muon xoa?"
+  forget_pass: "Quên mật khẩu?"
+  didn_confirm: "Không nhận được xác nhận?"
+  remember_me: "Ghi nhớ đăng nhập"
+  password: "Mật khẩu"
+  password_confirm: "Xác nhận Mật khẩu"
+  change_pass: "Đổi mật khẩu"
+  update: "Cập nhật"
+  resend_confirm: "Gởi xác nhận kích hoạt"
+  help: "Giúp đỡ"
+  date:
+    formats:
+      default: "%d.%m.%Y"
+  time:
+    formats:
+      default: "%d.%m.%Y %I:%M %p"
+  title_comment: "Tiêu đề Bình luận"
+  content_comment: "Nội dung Bình luận"
+  destroy_comment: "Xóa Bình luận"
+  add_comment: "Thêm Bình luận"
+  last_time_visited: "Lần cuối bạn ghé"
+  content: "Nội dung"
+  comment: "Bình luận"
+  views:
+    pagination:
+      previous: "&lt; Trước"
+      next: "Sau &gt;"
+      truncate: "..."
+      last: "Cuối"
+      first: "Đầu"

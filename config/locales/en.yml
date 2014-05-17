@@ -39,3 +39,32 @@ en:
   Created At: "Created At"
   Listingposts: "Listing posts"
   confirm: "Are you sure?"
+  forget_pass: "Forgot your password?"
+  didn_confirm: "Didn't receive confirmation instructions?"
+  remember_me: "Remember me"
+  password: "Password"
+  password_confirm: "Password confirmation"
+  change_pass: "Change my password"
+  update: "Update"
+  resend_confirm: "Resend confirmation instructions"
+  help: "Help"
+  date:
+    formats:
+      default: "%d.%m.%Y"
+  time:
+    formats:
+      default: "%d.%m.%Y %I:%M %p"
+  title_comment: "Title of Comment"
+  content_comment: "Content of Comment"
+  destroy_comment: "Destroy Comment"
+  add_comment: "Add a comment"
+  content: "Content"
+  last_time_visited: "Last time you visited"
+  comment: "Comment"
+  views:
+    pagination:
+      previous: "&lt; Previous"
+      next: "Next &gt;"
+      truncate: "..."
+      last: "Last"
+      first: "First"

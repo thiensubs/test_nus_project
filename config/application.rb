@@ -20,5 +20,10 @@ module TestNusProject
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
+    def default_url_options(options={})
+      # logger.debug "default_url_options is passed options: #{options.inspect}\n"
+      { locale: I18n.locale }
+    end
+
   end
 end
