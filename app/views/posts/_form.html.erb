@@ -1,6 +1,7 @@
+
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert alert-success" >
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
       <ul>
@@ -12,7 +13,7 @@
   <% end %>
    <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title, class: "form-control" %>
+    <%= f.text_field :title, autofocus: true, class: "form-control" %>
   </p>
 
   <p>

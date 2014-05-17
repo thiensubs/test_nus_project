@@ -41,11 +41,6 @@
       <% end %>
 
     </head>
-
-
-
-
-
     <body>
      <div id="wrapper">
       <div role="navigation" class="navbar navbar-inverse">
@@ -57,11 +52,14 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a href="./?locale=<%=I18n.locale %>" class="navbar-brand">Blog</a>
+            <a href="../?locale=<%= params[:locale] %>" class="navbar-brand">Blog</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-              <li><a href="/users/edit" class="btn btn-small"> <span class="glyphicon glyphicon-briefcase"></span><%= t("Profile") %></a></li>
+              <li><%= link_to edit_user_registration_path, class: "btn btn-small"  do %>
+              <span class="glyphicon glyphicon-briefcase"></span><%= t("Profile") %>
+              <% end %>
+              </li>
               <li><a href="#" class="btn btn-small"><%= t("help")%></a></li>
               <% if user_signed_in? %>
 

@@ -54,9 +54,9 @@ html,body{
 }
 #error_explanation
 {
-  border-color: red;
+ /* border-color: red;
   border-style: solid;
-  color: yellow;
+  color: yellow;*/
 }
 .container-fluid
 {

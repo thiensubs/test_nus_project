@@ -11,12 +11,33 @@ vi:
       not_saved:
         one: "1 lỗi làm %{resource} này không lưu lại được:"
         other: "%{count} lỗi làm %{resource} này không lưu lại được:"
+      accepted: "phải được đồng ý"
+      blank: "không thể để trắng"
+      confirmation: "không khớp với xác nhận"
+      empty: "không thể rỗng"
+      equal_to: "phải bằng %{count}"
+      even: "phải là số chẵn"
+      exclusion: "đã được giành trước"
+      greater_than: "phải lớn hơn %{count}"
+      greater_than_or_equal_to: "phải lớn hơn hoặc bằng %{count}"
+      inclusion: "không có trong danh sách"
+      invalid: "không hợp lệ"
+      less_than: "phải nhỏ hơn %{count}"
+      less_than_or_equal_to: "phải nhỏ hơn hoặc bằng %{count}"
+      not_a_number: "không phải là số"
+      not_an_integer: "phải là một số nguyên"
+      odd: "phải là số lẻ"
+      taken: "đã có"
+      too_long: "quá dài (tối đa %{count} ký tự)"
+      too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+      wrong_length: "độ dài không đúng (phải là %{count} ký tự)"
 
   devise:
     failure:
       already_authenticated: 'Bạn đã đăng nhập rồi.'
       unauthenticated: 'Bạn cần đăng nhập hoặc đăng ký để có thẻ tiếp tục.'
       unconfirmed: 'Bạn cần chứng thực tài khoản này mới có thể sử dụng được.'
+      not_found_in_database: "Không tìm thấy tài khoản"
       locked: 'Tài khoản của bạn đã bị khóa.'
       invalid: 'Sai email hoặc mật khẩu.'
       invalid_token: 'Sai mã xác nhận.'
@@ -56,3 +77,4 @@ vi:
         subject: 'Hướng dẫn đặt lại mật khẩu'
       unlock_instructions:
         subject: 'Hướng dẫn bỏ khóa tài khoản'
+

@@ -17,3 +17,6 @@
 //= require rails-timeago
 //= require rails-timeago-all
 //= require bootstrap
+//= require i18n
+//= require i18n/translations
+//= require jquery.validate
