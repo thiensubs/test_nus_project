@@ -29,9 +29,14 @@ production:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: d362elvd39kc7t
-  host: ec2-23-23-244-144.compute-1.amazonaws.com
+  # database: d362elvd39kc7t
+  # host: ec2-23-23-244-144.compute-1.amazonaws.com
+  # port:  5432
+  # username: zaswemyvtxilpf
+  # password: 0YDel3pATsYYHOIbJS6bvoyVu6
+  database: d6f44jb73cluv2
+  host: ec2-54-197-251-18.compute-1.amazonaws.com
   port:  5432
-  username: zaswemyvtxilpf
-  password: 0YDel3pATsYYHOIbJS6bvoyVu6
+  username: khiifuromqqnbz
+  password: o6XzM1riAorLbZDOK4qlfZsrP5
 
