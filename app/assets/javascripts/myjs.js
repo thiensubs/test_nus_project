@@ -35,7 +35,8 @@ $(document).ready(function() {
 
           "user[useremail]": {
             required: I18n.t("Please enter the email"),
-            email: I18n.t("Your email address is invalid")
+            email: I18n.t("Please enter a valid email address")
+
           },
           agree: {
             required: I18n.t("Check agree to submit.")
