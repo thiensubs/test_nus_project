@@ -41,6 +41,10 @@ vi:
   last_time_visited: "Lần cuối bạn ghé"
   content: "Nội dung"
   comment: "Bình luận"
+  subject_new_comment: "Bạn nhận được bình luận mới cho bài viết Mã số: %{post_id}"
+  You has a new comment for Post ID: "Bạn nhận được bình luận mới cho bài viết số:"
+  Thanks for joining and have a great day: "Ngày làm việc vui vẻ!"
+  New comment in: "Xem bình luận tại "
   views:
     pagination:
       previous: "&lt; Trước"

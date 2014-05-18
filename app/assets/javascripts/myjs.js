@@ -30,18 +30,18 @@ $(document).ready(function() {
         },
         messages: {
           "user[password]": {
-            required: "Please enter the password"
+            required: I18n.t("Please enter the password")
           },
 
           "user[useremail]": {
-            required: "Please enter the email",
-            email: "Your email address is invalid"
+            required: I18n.t("Please enter the email"),
+            email: I18n.t("Your email address is invalid")
           },
           agree: {
-            required: "Check agree to submit."
+            required: I18n.t("Check agree to submit.")
           },
           "user[password_confirmation]": {
-            equalTo: "Please enter the same password"
+            equalTo: I18n.t("Please enter the same password")
           }
         },
           // errorPlacement: function(error, element) {

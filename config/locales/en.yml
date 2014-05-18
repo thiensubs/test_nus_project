@@ -24,7 +24,7 @@ en:
   sign_out: "Sign out"
   sign_in: "Sign in"
   sign_up: "Sign up"
-  sign_msg: "Signed in as%{email}, Not you? "
+  sign_msg: "Signed in as %{email}, Not you? "
   Profile: "Profile"
   slogan: "Slogan here, just do it later"
   Edit: "Edit"
@@ -62,6 +62,10 @@ en:
   content: "Content"
   last_time_visited: "Last time you visited"
   comment: "Comment"
+  subject_new_comment: "You have new comment for Post_ID: %{post_id}"
+  You has a new comment for Post ID: "You has a new comment for Post ID:"
+  Thanks for joining and have a great day: "Thanks for joining and have a great day!"
+  New comment in: "New comment in"
   views:
     pagination:
       previous: "&lt; Previous"
