@@ -55,4 +55,4 @@ gem "cancan"
 gem "i18n-js"
 gem 'rails_12factor', group: :production
 gem 'unicorn'
-
+gem 'jquery-turbolinks'

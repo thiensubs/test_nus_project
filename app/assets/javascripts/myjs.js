@@ -14,33 +14,33 @@ $(document).ready(function() {
   $("#new_comment").submitWithAjax();
    $("#new_user").validate({
       rules: {
-            user_password_confirmation: {
+            "user[password_confirmation]": {
             equalTo: "#user_password"
 
           },
-          user_email: {
+          "user[email]": {
             required: true,
             email: true
           },
-          user_password:
+          "user[password]":
           {
             required: true
           }
 
         },
         messages: {
-          user_password: {
+          "user[password]": {
             required: "Please enter the password"
           },
 
-          user_email: {
-            required: "*Please enter your email",
+          "user[useremail]": {
+            required: "Please enter the email",
             email: "Your email address is invalid"
           },
           agree: {
             required: "Check agree to submit."
           },
-          user_password_confirmation: {
+          "user[password_confirmation]": {
             equalTo: "Please enter the same password"
           }
         },
