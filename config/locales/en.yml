@@ -76,7 +76,9 @@ en:
   minlength: "Password can't not be less than: {0} character"
   enter_the_text: "Please enter the text"
   posted: "Posted"
+  new_post: "New Post"
   by: "by"
+  posted: "Post Now"
   views:
     pagination:
       previous: "&lt; Previous"

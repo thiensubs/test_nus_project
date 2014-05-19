@@ -12,16 +12,16 @@
     </div>
   <% end %>
    <p>
-    <%= f.label :title %><br>
+    <%= f.label :title, t("Title") %><br>
     <%= f.text_field :title, autofocus: true, class: "form-control" %>
   </p>
 
   <p>
-    <%= f.label :content %><br>
+    <%= f.label :content, t("content")%><br>
     <%= f.text_area :content, class: "form-control", :size => "30x10" %>
   </p>
 
   <div class="abc">
-    <%= f.submit 'Submit', :class => "btn btn-primary" %>
+    <%= f.submit t("posted"), :class => "btn btn-primary" %>
   </div>
 <% end %>

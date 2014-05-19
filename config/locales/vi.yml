@@ -58,6 +58,8 @@ vi:
   enter_the_text: "Vui lòng không để trống, vui lòng nhập văn bản"
   posted: "Tạo vào lúc"
   by: "bởi"
+  new_post: "Bài viết mới"
+  posted: "Đăng"
   views:
     pagination:
       previous: "&lt; Trước"

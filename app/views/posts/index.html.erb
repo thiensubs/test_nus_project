@@ -24,7 +24,7 @@
            <% end %>
          </div>
          <div class="storycontent">
-          <%= post.content %>
+          <%= post.content.to_s.at(0..255)%> ...
          </div>
          <div class="feedback">
           <%= post.comments.count %> <%= t("comment")%>
