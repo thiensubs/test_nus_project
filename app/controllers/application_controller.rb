@@ -9,10 +9,27 @@ class ApplicationController < ActionController::Base
 
   # it will be set default locale for app.
   #  don't forget set it.
+  def after_sign_in_path_for(resource)
+    sign_in_url = url_for(:action => 'new', :controller => 'sessions', :only_path => false, :protocol => 'http')
+    if request.referer == sign_in_url
+      super
+    else
+      stored_location_for(resource) || request.referer || root_path
+    end
+  end
+  def after_sign_up_path_for(resource)
+    sign_in_url = url_for(:action => 'new', :controller => 'sessions', :only_path => false, :protocol => 'http')
+    if request.referer == sign_in_url
+      super
+    else
+      stored_location_for(resource) || request.referer || root_path
+    end
+  end
   def default_url_options(options={})
     { locale: I18n.locale }
   end
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
+    session[:locale] = params[:locale]
+    I18n.locale = session[:locale] || I18n.default_locale
   end
 end

@@ -3,7 +3,10 @@ class UserMailer < ActionMailer::Base
   def contact(post, current)
     @post=post
     @current_url=current
-    mail(to: @post.user.email , subject: t("subject_new_comment", :post_id => @post.id))
+    mail(
+      to: @post.user.email,
+      subject: t("subject_new_comment", :post_id => @post.id)
+      )
   end
 
   # def confirmation_instructions(user, token, opts={})

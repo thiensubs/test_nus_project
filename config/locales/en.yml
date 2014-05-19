@@ -73,6 +73,7 @@ en:
   email_invalid: "Your email address is invalid"
   same_password: "Please enter the same password"
   email_addres: "Please enter a valid email address."
+  minlength: "Password can't not be less than: {0} character"
   views:
     pagination:
       previous: "&lt; Previous"
