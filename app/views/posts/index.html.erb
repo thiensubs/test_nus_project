@@ -1,24 +1,37 @@
 <div class="table-responsive">
   <table class="table table-striped table-hover">
-    <caption><b><%= t("Listingposts") %></b></caption>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th><%= t("Title")%></th>
-        <th><%= t("Num of Comment")%></th>
-        <th><%= t("Control")%></th>
-        <th><%= t("Created At")%></th>
-      </tr>
-    </thead>
+
     <tbody>
       <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.id %></td>
-        <td><%= post.title %></td>
-        <td><%= post.comments.count %></td>
-        <td><%= link_to post do %>
+      <div id="pagebody">
+        <tr>
+        <td>
+          <h2 class="fancy">
+             <%= link_to post do %>
+          <%= post.title %>
+          <% end %>
+
+          </h2>
+          <div class="meta">
+          <%= t("posted")%> <%= l(post.created_at) %> <%= t("by")%>
+           <% unless post.user_id.blank? %>
+           <%  @user=User.find(post.user_id)%>
+           <% unless @user.blank? %>
+            <span class="label label-default">
+          <%= @user.email %>
+          </span>
+           <% end %>
+           <% end %>
+         </div>
+         <div class="storycontent">
+          <%= post.content %>
+         </div>
+         <div class="feedback">
+          <%= post.comments.count %> <%= t("comment")%>
+          <%= link_to post do %>
           <button class="btn btn-info" type="button"><%= t("Show")%></button>
           <% end %>
+
           <% if can? :update, post %>
           <%= link_to edit_post_path(post) do %>
           <button class="btn btn-default" type="button"><%= t("Edit")%></button>
@@ -30,16 +43,15 @@
           <% end %>
 
           <% end %>
-
+        </div>
         </td>
-
-        <td><%= post.created_at%>
-        </th>
       </tr>
       <% end %>
+    </div>
+  </tbody>
 
-    </tbody>
-  </table>
+
+</table>
 </div>
 <br>
 <%= link_to new_post_path do %>

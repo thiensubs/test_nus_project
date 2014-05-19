@@ -29,7 +29,7 @@ en:
   slogan: "Slogan here, just do it later"
   Edit: "Edit"
   Back: "Back"
-  CreateComment: "Create Comment"
+  createcomment: "Create Comment"
   NewPost: "New Post"
   Destroy: "Destroy"
   Show: "Show"
@@ -75,6 +75,8 @@ en:
   email_addres: "Please enter a valid email address."
   minlength: "Password can't not be less than: {0} character"
   enter_the_text: "Please enter the text"
+  posted: "Posted"
+  by: "by"
   views:
     pagination:
       previous: "&lt; Previous"

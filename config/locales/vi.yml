@@ -30,10 +30,12 @@ vi:
   edit_post: "Chỉnh sửa bài viết"
   date:
     formats:
-      default: "%d.%m.%Y"
+      default: "%d-%m-%Y"
   time:
+    am: "sáng"
     formats:
-      default: "%d.%m.%Y %I:%M %p"
+      default: "%I:%M %p %d.%m.%y"
+    pm: chiều
   title_comment: "Tiêu đề Bình luận"
   content_comment: "Nội dung Bình luận"
   destroy_comment: "Xóa Bình luận"
@@ -54,6 +56,8 @@ vi:
   email_addres: "Vui lòng nhập đúng địa chỉ email."
   minlength: "Mật khẩu không thể ngắn hơn : {0} ký tự"
   enter_the_text: "Vui lòng không để trống, vui lòng nhập văn bản"
+  posted: "Tạo vào lúc"
+  by: "bởi"
   views:
     pagination:
       previous: "&lt; Trước"
