@@ -53,6 +53,7 @@ vi:
   same_password: "Vui lòng điền mật khẩu xác nhận đúng với mật khẩu"
   email_addres: "Vui lòng nhập đúng địa chỉ email."
   minlength: "Mật khẩu không thể ngắn hơn : {0} ký tự"
+  enter_the_text: "Vui lòng không để trống, vui lòng nhập văn bản"
   views:
     pagination:
       previous: "&lt; Trước"

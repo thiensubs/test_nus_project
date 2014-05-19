@@ -4,12 +4,12 @@
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
-  <h1><%= t("hello") %><%= @post.user.email %>,</h1>
+  <h1>Hi <%= @post.user.email %>,</h1>
   <p>
-   <%=t("You has a new comment for Post ID") %><%= @post.id %>,<br>
+   <%=t("new_comment") %><%= @post.id %>,<br>
   </p>
   <p>
-  <%= t("New comment in") >: <%= @current_url %> :
+  <%= t("comment_in") %>: <%= @current_url %> :
   </p>
   <p>
    --------------------------------------------------------<br>
@@ -21,6 +21,6 @@
  <p>This is mailer system, don't reply...<br>
   Mails was sent at: <%= Time.now %>
 </p>
-<p><%= t("Thanks for joining and have a great day")%></p>
+<p><%= t("thank_you")%></p>
 </body>
 </html>

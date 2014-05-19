@@ -38,8 +38,8 @@
 
       <%= javascript_tag do %>
 
-        I18n.defaultLocale = "<%= I18n.default_locale %>";
-        I18n.locale = "<%= I18n.locale %>";
+      I18n.defaultLocale = "<%= I18n.default_locale %>";
+      I18n.locale = "<%= I18n.locale %>";
       <% end %>
 
     </head>
@@ -59,14 +59,15 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-              <li><%= link_to edit_user_registration_path, class: "btn btn-small"  do %>
-              <span class="glyphicon glyphicon-briefcase"></span><%= t("Profile") %>
-              <% end %>
+              <li>
+                <%= link_to edit_user_registration_path, class: "btn btn-small"  do %>
+                <span class="glyphicon glyphicon-briefcase"></span><%= t("Profile") %>
+                <% end %>
               </li>
               <% if user_signed_in? %>
 
               <li id="current_user" class="divider">
-              <%=t("sign_msg", :email => current_user.email )%>
+                <%=t("sign_msg", :email => current_user.email )%>
               </li>
 
               <li>
@@ -75,17 +76,15 @@
 
               <% else %>
               <li>
-              <%= link_to t("sign_up"), new_user_registration_path, class: "btn btn-small" %>
+                <%= link_to t("sign_up"), new_user_registration_path, class: "btn btn-small" %>
               </li>
               <li>
                 <%= link_to t("sign_in"), new_user_session_path, class: "btn btn-small" %>
                 <% end %>
               </li>
-
-
             </ul>
             <ul class="nav navbar-nav navbar-right" id="lang">
-            <% if I18n.locale == I18n.default_locale %>
+              <% if I18n.locale == I18n.default_locale %>
               <li>
                 <%= link_to "/?locale=vi" do %>
                 <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "25px") %>
@@ -105,7 +104,6 @@
           </div>
         </div>
       </div>
-
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-3 sidebar">
@@ -115,9 +113,9 @@
          </div>
          <div class="col-sm-9">
           <div class="alert alert-success">
-          <%= content_tag(:div, t(flash[:error]), :id => "flash_error") if flash[:error] %>
-          <%= content_tag(:div, t(flash[:notice]), :id => "flash_notice") if flash[:notice] %>
-          <%= content_tag(:div, t(flash[:alert]), :id => "flash_alert") if flash[:alert] %>
+            <%= content_tag(:div, t(flash[:error]), :id => "flash_error") if flash[:error] %>
+            <%= content_tag(:div, t(flash[:notice]), :id => "flash_notice") if flash[:notice] %>
+            <%= content_tag(:div, t(flash[:alert]), :id => "flash_alert") if flash[:alert] %>
           </div>
           <%= yield %>
         </div>
@@ -128,5 +126,4 @@
    &copy;Blog By ThienSuBS 2014
  </div> <!-- /container -->
 </body>
-
 </html>
