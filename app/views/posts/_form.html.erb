@@ -1,27 +1,25 @@
 
 <%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div class="alert alert-warning" >
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<% if @post.errors.any? %>
+<div class="alert alert-warning" >
+<h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+  <ul>
+    <% @post.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<p>
+  <%= f.label :title, t("Title") %>
+  <%= f.text_field :title, autofocus: true, class: "form-control" %>
+</p>
+ <%= f.label :content, t("content")%>
+  <div id="content_edit" class="k-content">
 
-      <ul>
-      <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-   <p>
-    <%= f.label :title, t("Title") %><br>
-    <%= f.text_field :title, autofocus: true, class: "form-control" %>
-  </p>
-
-  <p>
-    <%= f.label :content, t("content")%><br>
-    <%= f.text_area :content, class: "form-control", :size => "30x10" %>
-  </p>
-
+   <%= f.text_area  :content,  :size => "30x10" %>
+ </div>
   <div class="abc">
     <%= f.submit t("posted"), :class => "btn btn-primary" %>
   </div>
-<% end %>
+  <% end %>

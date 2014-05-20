@@ -1,6 +1,6 @@
 jQuery.ajaxSetup({
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
-})
+});
 
 jQuery.fn.submitWithAjax = function() {
   this.submit(function() {
@@ -11,9 +11,11 @@ jQuery.fn.submitWithAjax = function() {
   })
   return this;
 };
-
 $(document).ready(function() {
   $("#new_comment").submitWithAjax();
+  $("#post_content").kendoEditor({
+     encoded: false
+  });
   $("#new_user").validate({
     rules: {
       "user[password_confirmation]": {
@@ -91,6 +93,7 @@ $(document).ready(function() {
         required: true
       }
     },
+
     messages: {
       "comment[title_comment]": {
         required: I18n.t("enter_the_text")
@@ -106,7 +109,7 @@ $(document).ready(function() {
     unhighlight: function (element) {
       $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
     }
-
   });
-})
+
+});
 

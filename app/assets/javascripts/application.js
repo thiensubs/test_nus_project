@@ -20,7 +20,10 @@
 //= require bootstrap
 //= require i18n
 //= require i18n/translations
+
 //= require jquery.validate
+//= require kendo.all.min
+
 //= require jquery.turbolinks
 //= require_tree .
 //= require_self

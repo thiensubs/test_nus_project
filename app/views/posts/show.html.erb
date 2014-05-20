@@ -18,8 +18,8 @@
   </div>
   <div class="panel-body">
     <p>
-      <strong><%= t("content") %>:</strong>
-      <%= @post.content %>
+      <strong><%= t("content") %>:</strong> <br />
+      <%= @post.content.html_safe %>
     </p>
   </div>
 </div>

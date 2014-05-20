@@ -30,8 +30,9 @@
               <% end %>
             </div>
             <div class="storycontent">
-              <%= post.content.to_s.at(0..255)%> ...
+              <%= strip_tags(post.content).to_s.at(0..255) %> ...
             </div>
+
             <div class="feedback">
               <%= post.comments.count %> <%= t("comment")%>
               <%= link_to post do %>
