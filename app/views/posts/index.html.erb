@@ -5,53 +5,55 @@
       <% @posts.each do |post| %>
       <div id="pagebody">
         <tr>
-        <td>
-          <h2 class="fancy">
+          <td>
+            <h2 class="fancy">
              <%= link_to post do %>
-          <%= post.title %>
-          <% end %>
+             <%= post.title %>
+             <% end %>
 
-          </h2>
-          <div class="meta">
-          <%= t("posted")%> <%= l(post.created_at) %> <%= t("by")%>
-           <% unless post.user_id.blank? %>
-           <%  @user=User.find(post.user_id)%>
-           <% unless @user.blank? %>
-            <span class="label label-default">
-          <%= @user.email %>
-          </span>
-           <% end %>
-           <% end %>
-         </div>
-         <div class="storycontent">
-          <%= post.content.to_s.at(0..255)%> ...
-         </div>
-         <div class="feedback">
-          <%= post.comments.count %> <%= t("comment")%>
-          <%= link_to post do %>
-          <button class="btn btn-info" type="button"><%= t("Show")%></button>
-          <% end %>
+           </h2>
+           <div class="meta">
+            <%= t("posted")%> <%= l(post.created_at) %> <%= t("by")%>
+            <% unless post.user_id.blank? %>
+            <% unless User.find_by_id(post.user_id).blank?
+              @user=User.find(post.user_id)
+              end  %>
+              <% unless @user.blank? %>
+              <span class="label label-default">
+                <%= @user.email %>
+              </span>
+              <% end %>
+              <% end %>
+            </div>
+            <div class="storycontent">
+              <%= post.content.to_s.at(0..255)%> ...
+            </div>
+            <div class="feedback">
+              <%= post.comments.count %> <%= t("comment")%>
+              <%= link_to post do %>
+              <button class="btn btn-info" type="button"><%= t("Show")%></button>
+              <% end %>
 
-          <% if can? :update, post %>
-          <%= link_to edit_post_path(post) do %>
-          <button class="btn btn-default" type="button"><%= t("Edit")%></button>
-          <% end %>
-          <% end %>
-          <% if can? :destroy, post %>
-          <%= link_to post, method: :delete, data: {confirm: 'Are you sure?'} do %>
-          <button type="button" class="btn btn-danger"><%= t("Destroy")%></button>
-          <% end %>
+              <% if can? :update, post %>
+              <%= link_to edit_post_path(post) do %>
+              <button class="btn btn-default" type="button"><%= t("Edit")%></button>
+              <% end %>
+              <% end %>
+              <% if can? :destroy, post %>
+              <%= link_to post, method: :delete, data: {confirm: 'Are you sure?'} do %>
+              <button type="button" class="btn btn-danger"><%= t("Destroy")%></button>
+              <% end %>
 
-          <% end %>
-        </div>
-        </td>
-      </tr>
-      <% end %>
-    </div>
-  </tbody>
+              <% end %>
+            </div>
+          </td>
+        </tr>
+        <% end %>
+      </div>
+    </tbody>
 
 
-</table>
+  </table>
 </div>
 <br>
 <%= link_to new_post_path do %>
