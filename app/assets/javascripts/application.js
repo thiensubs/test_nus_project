@@ -22,6 +22,8 @@
 //= require jquery.validate
 //= require jquery.turbolinks
 //= require_self
+//= require wysihtml5-0.3.0.min
+//= require advanced
 
 
 
