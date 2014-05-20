@@ -6,7 +6,7 @@ group :development, :test do
 end
 group :production do
  gem 'pg'
- gem 'therubyracer'
+ gem 'rails_12factor'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -46,7 +46,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'paperclip'
-# gem 'twitter-bootstrap-rails'
 gem 'friendly_id'
 gem 'bcrypt-ruby', :require=>'bcrypt'
 gem 'devise'
@@ -54,6 +53,5 @@ gem 'kaminari', github: 'amatsuda/kaminari'
 gem 'rails-timeago', '~> 2.0'
 gem "cancan"
 gem "i18n-js"
-gem 'rails_12factor', group: :production
 gem 'unicorn'
 gem 'jquery-turbolinks'
