@@ -23,3 +23,6 @@
 //= require jquery.turbolinks
 //= require_tree .
 //= require_self
+
+
+
