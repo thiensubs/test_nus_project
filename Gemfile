@@ -6,6 +6,7 @@ group :development, :test do
 end
 group :production do
  gem 'pg'
+ gem 'therubyracer'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
