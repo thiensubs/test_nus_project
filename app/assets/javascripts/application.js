@@ -21,7 +21,6 @@
 //= require i18n/translations
 //= require jquery.validate
 //= require jquery.turbolinks
-//= require_tree .
 //= require_self
 
 
