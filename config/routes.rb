@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  scope "/:locale" do
+
   # scope "(:locale)", locale: /en|vi/ do
    resources :posts do
     resources :comments
   end
-
-end
 
   root :to => "posts#index"
 

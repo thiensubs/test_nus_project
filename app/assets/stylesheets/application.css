@@ -48,10 +48,7 @@ html,body{
 {
   min-height: 100%;
 }
-#lang
-{
-  float:right;
-}
+
 #error_explanation
 {
  /* border-color: red;
