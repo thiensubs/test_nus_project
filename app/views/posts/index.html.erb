@@ -1,3 +1,7 @@
+<%= link_to new_post_path do %>
+<span class="glyphicon glyphicon-plus-sign"></span><%= t("NewPost")%>
+<% end %>
+<br />
 <div class="table-responsive">
   <table class="table table-striped table-hover">
 
@@ -55,11 +59,6 @@
 
   </table>
 </div>
-<br>
-<%= link_to new_post_path do %>
-<span class="glyphicon glyphicon-plus-sign"></span><%= t("NewPost")%>
-<% end %>
-
 <div class="page">
   <%= paginate @posts %>
 </div>
