@@ -21,7 +21,7 @@ module TestNusProject
     # config.i18n.default_locale = :de
 
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
-    config.assets.precompile += kendo.all.min.assets
+    config.assets.precompile += %w( kendo.all.min.js )
     def default_url_options(options={})
       # logger.debug "default_url_options is passed options: #{options.inspect}\n"
       # { locale: I18n.locale }
