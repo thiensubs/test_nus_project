@@ -13,17 +13,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-
 //= require_tree .
 //= require rails-timeago
 //= require rails-timeago-all
 //= require bootstrap
 //= require i18n
 //= require i18n/translations
-
 //= require jquery.validate
-//= require kendo.all.min
-
 //= require jquery.turbolinks
 //= require_tree .
 //= require_self
