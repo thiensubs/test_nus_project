@@ -13,13 +13,6 @@ jQuery.fn.submitWithAjax = function() {
 };
 $(document).ready(function() {
   $("#new_comment").submitWithAjax();
-
-
-  var editor = new wysihtml5.Editor("post_content", { // id of textarea element
-  toolbar:      "wysihtml5-editor-toolbar", // id of toolbar element
-  parserRules:  wysihtml5ParserRules // defined in parser rules set
-});
-
   $("#new_user").validate({
     rules: {
       "user[password_confirmation]": {
