@@ -14,15 +14,6 @@ class PostsController < ApplicationController
      # logger.debug request.url
     @post = Post.friendly.find(params[:id])
     @comments=@post.comments.order("created_at DESC").page(params[:page]).per(2)
-    logger.debug request.path
-    logger.debug request.url
-    logger.debug request.host_with_port
-
-
-
-    # if request.path != post_path(@post)
-    #   redirect_to @post, status: :moved_permanently
-    # end
   end
 
   # GET /posts/new
