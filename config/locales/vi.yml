@@ -67,6 +67,8 @@ vi:
   unhappy: "Cảm thấy không vui?"
   cancel_account: "Hủy bỏ tài khoản"
   sure: "Bạn có chắc chắn không?"
+  comment_updated: "Bình luận đã cập nhật thành công."
+  comment_destroy: "Bình luận đã hủy thành công."
   views:
     pagination:
       previous: "&lt; Trước"

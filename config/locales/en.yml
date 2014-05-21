@@ -84,6 +84,8 @@ en:
   unhappy: "Unhappy?"
   cancel_account: "Cancel my account"
   sure: "Are you sure?"
+  comment_updated: "Comment was successfully updated."
+  comment_destroy: "Comment was successfully destroyed."
   by: "by"
   posted: "Post Now"
   views:
