@@ -20,8 +20,7 @@
     <p>
       <span class="glyphicon glyphicon-fire"></span>
       <%= link_to t("destroy_comment"), [comment.post, comment],
-      method: :delete,
-      data: { confirm: 'Are you sure?' } %>
+      method: :delete, data: { confirm: I18n.t("sure") }%>
     </p>
    <%= t("last_time_visited") %>:<%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %>
   </div>

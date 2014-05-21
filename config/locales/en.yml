@@ -78,6 +78,12 @@ en:
   posted: "Posted"
   new_post: "New Post"
   has_no_comment: "No Comment, Please create your comment"
+  leave_blank: "leave blank if you don't want to change it"
+  current_pass: "Current password"
+  current_require_msg: "we need your current password to confirm your changes"
+  unhappy: "Unhappy?"
+  cancel_account: "Cancel my account"
+  sure: "Are you sure?"
   by: "by"
   posted: "Post Now"
   views:

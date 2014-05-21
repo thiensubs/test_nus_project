@@ -61,6 +61,12 @@ vi:
   by: "bởi"
   new_post: "Bài viết mới"
   posted: "Đăng"
+  leave_blank: "Để trống nếu không muốn đổi mật khẩu"
+  current_pass: "Mật khẩu hiện tại"
+  current_require_msg: "Bạn cần nhập mật khẩu hiện tại để xác nhận rằng bạn muốn thay đổi"
+  unhappy: "Cảm thấy không vui?"
+  cancel_account: "Hủy bỏ tài khoản"
+  sure: "Bạn có chắc chắn không?"
   views:
     pagination:
       previous: "&lt; Trước"
