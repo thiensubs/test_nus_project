@@ -118,10 +118,10 @@
       </div>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-sm-4">
           <%= render "shared/profile" %>
           </div>
-          <div class="col-sm-9">
+          <div class="col-sm-8">
             <%= content_tag(:div, t(flash[:error]), :id => "flash_error", class: "alert alert-danger") if flash[:error] %>
             <%= content_tag(:div, t(flash[:notice]), :id => "flash_notice", class: "alert alert-info") if flash[:notice] %>
             <%= content_tag(:div, t(flash[:alert]), :id => "flash_alert", class: "alert alert-warning") if flash[:alert] %>
