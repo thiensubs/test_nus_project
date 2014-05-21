@@ -4,13 +4,17 @@ jQuery.ajaxSetup({
 
 jQuery.fn.submitWithAjax = function() {
   this.submit(function() {
-     var $form = $("#new_comment");
-    if ($form.valid())
+   var $form = $("#new_comment");
+   if ($form.valid())
     $.post(this.action, $(this).serialize(), null, "script");
-    return false;
-  })
+  return false;
+})
   return this;
 };
+$( document ).ajaxComplete(function( event, xhr, settings ) {
+  if (xhr.status == 401)
+    alert(xhr.responseText);
+});
 $(document).ready(function() {
   $("#new_comment").submitWithAjax();
   $("#new_user").validate({
@@ -55,58 +59,58 @@ $(document).ready(function() {
     }
   });
   $("#new_post").validate({
-     rules: {
-      "post[title]": {
-        required: true
-      },
-      "post[content]":
-      {
-        required: true
-      }
+   rules: {
+    "post[title]": {
+      required: true
     },
-    messages: {
-      "post[title]": {
-        required: I18n.t("enter_the_text")
-      },
-      "post[content]": {
-        required: I18n.t("enter_the_text")
-      }
-    },
-    onfocusout: false,
-    highlight: function (element) {
-      $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
-    },
-    unhighlight: function (element) {
-      $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+    "post[content]":
+    {
+      required: true
     }
-  });
+  },
+  messages: {
+    "post[title]": {
+      required: I18n.t("enter_the_text")
+    },
+    "post[content]": {
+      required: I18n.t("enter_the_text")
+    }
+  },
+  onfocusout: false,
+  highlight: function (element) {
+    $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+  },
+  unhighlight: function (element) {
+    $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+  }
+});
   $("#new_comment").validate({
-     rules: {
-      "comment[title_comment]": {
-        required: true
-      },
-      "comment[content_comment]":
-      {
-        required: true
-      }
+   rules: {
+    "comment[title_comment]": {
+      required: true
     },
-
-    messages: {
-      "comment[title_comment]": {
-        required: I18n.t("enter_the_text")
-      },
-      "comment[content_comment]": {
-        required: I18n.t("enter_the_text")
-      }
-    },
-    onfocusout: false,
-    highlight: function (element) {
-      $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
-    },
-    unhighlight: function (element) {
-      $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+    "comment[content_comment]":
+    {
+      required: true
     }
-  });
+  },
+
+  messages: {
+    "comment[title_comment]": {
+      required: I18n.t("enter_the_text")
+    },
+    "comment[content_comment]": {
+      required: I18n.t("enter_the_text")
+    }
+  },
+  onfocusout: false,
+  highlight: function (element) {
+    $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+  },
+  unhighlight: function (element) {
+    $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+  }
+});
 
 });
 

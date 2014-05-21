@@ -28,6 +28,22 @@ header {
 /*  clear: both;
   position: relative;
   float: left;*/
+  color: rgba(29, 62, 158, 1);
+  background-color: rgba(126, 164, 155, 1);
+  border-color: #145A69;
+}
+#comment_show
+{
+  border-color: #145A69;
+
+  border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+}
+#line
+{
+  border-color: #145A69;
+  border-top: solid 1px;
+
 }
 .comment
 {

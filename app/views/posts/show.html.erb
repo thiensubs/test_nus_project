@@ -1,14 +1,18 @@
 <p id="notice"><%= notice %></p>
 <div class="clear">
+<% if can? :update, @post %>
   <%= link_to edit_post_path(@post) do%>
-  <span class="glyphicon glyphicon-pencil"><%= t("Edit")%> </span>
+  <span class="glyphicon glyphicon-pencil"></span>
+  <%= t("Edit")%>
   <% end %> |
+  <% end %>
   <%= link_to posts_path do %>
-  <span class="glyphicon glyphicon-hand-left"><%= t("Back")%></span>
+  <span class="glyphicon glyphicon-hand-left"></span>
+  <%= t("Back")%>
   <% end %>
 </div>
 <div id="content" class="panel panel-info">
-  <div id="pa_ge" class="panel-heading">
+  <div  class="panel-heading">
 
     <blockquote class="blockquote">
       <h1><%= @post.title %></h1>
@@ -20,36 +24,36 @@
     <p>
       <strong><%= t("content") %>:</strong> <br />
       <div>
-      <%= @post.content.html_safe %>
+        <%= @post.content.html_safe %>
       </div>
     </p>
   </div>
 </div>
 
-<div class="panel panel-danger">
+<div  id="comment_show" class="panel panel panel-default">
   <div id="pa_ge" class="panel-heading">
     <h2 id="comments_count"><%=@post.comments.count %> <%=t("comment") %> </h2>
   </div>
   <div class="panel-body">
     <div class="row-fluid">
-      <div class="col-sm-8">
-        <div id="reviews">
-          <div id="comment">
-            <%= render @comments %>
-          </div>
-          <div class="page">
-            <%= paginate @comments %>
-          </div>
-        </div><!--/span-->
+     <div id="reviews">
+      <div id="comment">
+        <%= render @comments %>
       </div>
-      <div class="col-sm-4">
-        <div class="comment">
-          <h2><%= t("add_comment") %></h2>
-          <%= render "comments/form" %>
-        </div>
+      <div class="page">
+        <%= paginate @comments %>
+      </div>
+    </div><!--/span-->
+    <div class="comment">
+      <% if  @post.comments.count == 0 %>
+      <h2>  <%=t("has_no_comment") %> </h2>
+      <% end %>
+      <div id="line">
+        <%= render "comments/form" %>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 

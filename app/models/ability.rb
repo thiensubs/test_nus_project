@@ -6,7 +6,8 @@ class Ability
     #
       user ||= User.new # guest user (not logged in)
       if user
-        can :manage, Post, :user_id => user.id
+        can :manage, [Post, Comment], :user_id => user.id
+
       else
         can :read, :all
       end
