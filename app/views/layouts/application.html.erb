@@ -50,67 +50,67 @@
           <div class="navbar-header">
             <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle"
             type="button">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <button class="navbar-toggle" data-toggle="collapse" type="button">
-              <% if I18n.locale == I18n.default_locale %>
-                <%= link_to "/?locale=vi" do %>
-                <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "22px") %>
-                <% end %>
-              <% else %>
-                <%= link_to "/?locale=en" do %>
-                <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "22px") %>
-                <% end %>
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <button class="navbar-toggle" data-toggle="collapse" type="button">
+            <% if I18n.locale == I18n.default_locale %>
+            <%= link_to "/?locale=vi" do %>
+            <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "22px") %>
+            <% end %>
+            <% else %>
+            <%= link_to "/?locale=en" do %>
+            <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "22px") %>
+            <% end %>
+            <% end %>
+          </button>
+          <a href="/?locale=<%= I18n.locale %>" class="navbar-brand">Blog</a>
+
+        </div>
+        <div class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <%= link_to edit_user_registration_path, class: "btn btn-small"  do %>
+              <span class="glyphicon glyphicon-briefcase"></span><%= t("Profile") %>
               <% end %>
-            </button>
-            <a href="/?locale=<%= I18n.locale %>" class="navbar-brand">Blog</a>
+            </li>
+            <% if user_signed_in? %>
 
-          </div>
-          <div class="navbar-collapse collapse" role="navigation">
-            <ul class="nav navbar-nav">
-              <li>
-                <%= link_to edit_user_registration_path, class: "btn btn-small"  do %>
-                <span class="glyphicon glyphicon-briefcase"></span><%= t("Profile") %>
-                <% end %>
-              </li>
-              <% if user_signed_in? %>
+            <li id="current_user" class="divider">
+              <%=t("sign_msg", :email => current_user.email )%>
+            </li>
 
-              <li id="current_user" class="divider">
-                <%=t("sign_msg", :email => current_user.email )%>
-              </li>
+            <li>
+              <%= link_to t("sign_out"), destroy_user_session_path, class: "btn btn-small" %>
+            </li>
 
-              <li>
-                <%= link_to t("sign_out"), destroy_user_session_path, class: "btn btn-small" %>
-              </li>
-
-              <% else %>
-              <li>
-                <%= link_to t("sign_up"), new_user_registration_path, class: "btn btn-small" %>
-              </li>
-              <li>
-                <%= link_to t("sign_in"), new_user_session_path, class: "btn btn-small" %>
-                <% end %>
-
-              </ul>
-              <ul class="nav navbar-nav navbar-right av-pills clearfinx">
-              </li>
-              <% if I18n.locale == I18n.default_locale %>
-              <li>
-                <%= link_to ".."+request.path+"?locale=vi", class: "btn btn-small" do %>
-                <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "25px") %>
-                <% end %>
-              </li>
-              <% else %>
-              <li>
-                <%= link_to ".."+request.path+"?locale=en", class: "btn btn-small" do %>
-                <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "25px") %>
-                <% end %>
-              </li>
+            <% else %>
+            <li>
+              <%= link_to t("sign_up"), new_user_registration_path, class: "btn btn-small" %>
+            </li>
+            <li>
+              <%= link_to t("sign_in"), new_user_session_path, class: "btn btn-small" %>
               <% end %>
+
             </ul>
+            <ul class="nav navbar-nav navbar-right av-pills clearfinx">
+            </li>
+            <% if I18n.locale == I18n.default_locale %>
+            <li>
+              <%= link_to ".."+request.path+"?locale=vi", class: "btn btn-small" do %>
+              <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "25px") %>
+              <% end %>
+            </li>
+            <% else %>
+            <li>
+              <%= link_to ".."+request.path+"?locale=en", class: "btn btn-small" do %>
+              <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "25px") %>
+              <% end %>
+            </li>
+            <% end %>
+          </ul>
             <!-- <form class="navbar-form navbar-right">
               <input type="text" placeholder="Search..." class="form-control" title="Enter keyword(s) to find">
             </form> -->
@@ -123,11 +123,9 @@
 
           </div>
           <div class="col-sm-8">
-            <div class="alert alert-success">
-              <%= content_tag(:div, t(flash[:error]), :id => "flash_error") if flash[:error] %>
-              <%= content_tag(:div, t(flash[:notice]), :id => "flash_notice") if flash[:notice] %>
-              <%= content_tag(:div, t(flash[:alert]), :id => "flash_alert") if flash[:alert] %>
-            </div>
+            <%= content_tag(:div, t(flash[:error]), :id => "flash_error", class: "alert alert-danger") if flash[:error] %>
+            <%= content_tag(:div, t(flash[:notice]), :id => "flash_notice", class: "alert alert-info") if flash[:notice] %>
+            <%= content_tag(:div, t(flash[:alert]), :id => "flash_alert", class: "alert alert-warning") if flash[:alert] %>
             <%= yield %>
           </div>
           <div class="col-sm-2">
