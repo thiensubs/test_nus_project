@@ -32,10 +32,10 @@ vi:
     formats:
       default: "%d-%m-%Y"
   time:
-    am: "sáng"
+    am: "Sáng"
     formats:
       default: "%I:%M %p %d.%m.%y"
-    pm: chiều
+    pm: "Chiều"
   title_comment: "Tiêu đề Bình luận"
   content_comment: "Nội dung Bình luận"
   destroy_comment: "Xóa Bình luận"
