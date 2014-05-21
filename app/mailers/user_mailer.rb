@@ -8,22 +8,4 @@ class UserMailer < ActionMailer::Base
       subject: t("subject_new_comment", :post_id => @post.id)
       )
   end
-
-  # def confirmation_instructions(user, token, opts={})
-  #   @user = user
-  #   @resource=user
-  #   @email=user.email
-  #   @token=user.confirmation_token
-  #   mail(to: @user.email, subject: t("devise.mailer.confirmation_instructions.subject"))
-  # end
-
-  # def reset_password_instructions(user)
-  #   @user = user
-  #   mail to: @user.email
-  # end
-
-  # private
-  #  def set_locale(user)
-  #    I18n.locale = user.locale || I18n.default_locale
-  #  end
 end

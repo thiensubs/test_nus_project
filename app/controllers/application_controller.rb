@@ -32,4 +32,14 @@ class ApplicationController < ActionController::Base
     session[:locale] = params[:locale]
     I18n.locale = session[:locale] || I18n.default_locale
   end
+  layout :layout_by_resource
+  protected
+
+  def layout_by_resource
+    if devise_controller? && resource_name == :user
+      "profile"
+    else
+      "application"
+    end
+  end
 end
