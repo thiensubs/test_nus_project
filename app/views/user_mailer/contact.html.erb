@@ -15,12 +15,13 @@
    --------------------------------------------------------<br>
    ID: <%= @post.comments.last.id %><br>
    <%= t("Title") %>: <%= @post.comments.last.title_comment %><br>
-   <%= t("Content") %>: <%= @post.comments.last.content_comment %><br>
+   <%= t("content") %>: <%= @post.comments.last.content_comment %><br>
    --------------------------------------------------------<br>
  </p>
- <p>This is mailer system, don't reply...<br>
+<p><%= t("thank_you")%></p>
+---------------------------------------------
+<p>This is mailer system, don't reply...<br>
   Mails was sent at: <%= Time.now %>
 </p>
-<p><%= t("thank_you")%></p>
 </body>
 </html>
