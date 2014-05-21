@@ -17,6 +17,10 @@ header {
 {
   text-align: center;
 }
+.flag
+{
+  padding: 6px 10px !important;
+}
 #content
 {
   /*text-align: center;

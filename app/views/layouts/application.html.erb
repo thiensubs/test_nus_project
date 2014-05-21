@@ -37,7 +37,6 @@
       <%= javascript_include_tag "application" %>
 
       <%= javascript_tag do %>
-
       I18n.defaultLocale = "<%= I18n.default_locale %>";
       I18n.locale = "<%= I18n.locale %>";
       <% end %>
@@ -55,7 +54,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <button class="navbar-toggle" data-toggle="collapse" type="button">
+          <button class="navbar-toggle flag" data-toggle="collapse" type="button">
             <% if I18n.locale == I18n.default_locale %>
             <%= link_to "/?locale=vi" do %>
             <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "22px") %>
