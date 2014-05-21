@@ -1,0 +1,3 @@
+$('#table_post_index').html('<%= escape_javascript render(@posts) %>');
+$('#page_post_index').html('<%= escape_javascript(paginate(@posts, :remote => true).to_s) %>');
+window.history.pushState("object or string", "Title", '<%=request.path%>' + '?locale=<%= I18n.locale %>' + '&page=<%= params[:page] %>');

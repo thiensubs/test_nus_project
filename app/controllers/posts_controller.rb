@@ -6,15 +6,19 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order("created_at DESC").page(params[:page]).per(6)
+    respond_to do |format|
+      format.html
+      format.js { }
+    end
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
      # logger.debug request.url
-    @post = Post.friendly.find(params[:id])
-    @comments=@post.comments.order("created_at DESC").page(params[:page]).per(2)
-  end
+     @post = Post.friendly.find(params[:id])
+     @comments=@post.comments.order("created_at DESC").page(params[:page]).per(2)
+   end
 
   # GET /posts/new
   def new
