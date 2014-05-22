@@ -17,16 +17,13 @@ class CommentsController < ApplicationController
     @comment = @post.comments.new(comment_params)
     if  @comment.save
       @current_url = post_url(@post)
-
-      respond_to do |format|
-        format.html { redirect_to @comment.post }
-        format.js {}
-      end
       UserMailer.contact(@post,@current_url).deliver
+      @comments = @post.comments.order("created_at DESC").page(params[:page]).per(2)
     end
-     @comments = @post.comments.order("created_at DESC").page(params[:page]).per(2)
-
-
+    respond_to do |format|
+      format.html { redirect_to @comment.post }
+      format.js {}
+    end
   end
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
