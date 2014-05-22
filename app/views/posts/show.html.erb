@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <div class="clear">
 <% if can? :update, @post %>
   <%= link_to edit_post_path(@post) do%>
@@ -13,16 +12,14 @@
 </div>
 <div id="content" class="panel panel-info">
   <div  class="panel-heading">
-
     <blockquote class="blockquote">
       <h1><%= @post.title %></h1>
       <footer><%= @post.created_at.strftime("%d %B %Y") %></footer>
     </blockquote>
-
   </div>
   <div class="panel-body">
     <p>
-      <strong><%= t("content") %>:</strong> <br />
+      <strong><%= t(".content") %>:</strong> <br />
       <div>
         <%= @post.content.html_safe %>
       </div>
@@ -32,7 +29,7 @@
 
 <div  id="comment_show" class="panel panel panel-default">
   <div id="pa_ge" class="panel-heading">
-    <h2 id="comments_count"><%=@post.comments.count %> <%=t("comment") %> </h2>
+    <h2 id="comments_count"><%=@post.comments.count %> <%=t(".comment") %> </h2>
   </div>
   <div class="panel-body">
     <div class="row-fluid">
@@ -46,7 +43,7 @@
     </div><!--/span-->
     <div class="comment">
       <% if  @post.comments.count == 0 %>
-      <h2>  <%=t("has_no_comment") %> </h2>
+      <h2>  <%=t(".has_no_comment") %> </h2>
       <% end %>
       <div id="line">
         <%= render "comments/form" %>

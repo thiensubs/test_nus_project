@@ -72,7 +72,6 @@ en:
   enter_the_text: "Please enter the text"
   posted: "Posted"
   new_post: "New Post"
-  has_no_comment: "No Comment, Please create your comment"
   leave_blank: "leave blank if you don't want to change it"
   current_pass: "Current password"
   current_require_msg: "we need your current password to confirm your changes"
@@ -98,6 +97,11 @@ en:
       enter_text: "Enter your text ..."
       content: "Content"
       title: "Title"
+    show:
+      content: "Content"
+      title: "Title"
+      comment: "Comment"
+      has_no_comment: "No Comment, Please create your comment"
   comments:
     form:
       title_comment: "Title of Comment"

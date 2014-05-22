@@ -57,7 +57,6 @@ vi:
   minlength: "Mật khẩu không thể ngắn hơn : {0} ký tự"
   enter_the_text: "Vui lòng không để trống, vui lòng nhập văn bản"
   posted: "Tạo vào lúc"
-  has_no_comment: "Không có bình luận nào, Hãy tạo bình luận đầu tiên."
   by: "bởi"
   new_post: "Bài viết mới"
   posted: "Đăng"
@@ -84,6 +83,11 @@ vi:
       enter_text: "Nhập vào nội dung ..."
       content: "Nội dung"
       title: "Tiêu đề"
+    show:
+      content: "Nội dung"
+      title: "Tiêu đề"
+      comment: "Bình luận"
+      has_no_comment: "Không có bình luận nào, Hãy tạo bình luận đầu tiên."
   comments:
     form:
       title_comment: "Tiêu đề Bình luận"
