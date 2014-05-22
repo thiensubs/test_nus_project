@@ -86,6 +86,9 @@ en:
   sure: "Are you sure?"
   comment_updated: "Comment was successfully updated."
   comment_destroy: "Comment was successfully destroyed."
+  post_success_msg: "Post was successfully created."
+  post_update_msg: "Post was successfully updated."
+  post_destroy_msg: "Post was successfully destroyed."
   by: "by"
   posted: "Post Now"
   views:

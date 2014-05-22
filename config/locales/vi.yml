@@ -69,6 +69,9 @@ vi:
   sure: "Bạn có chắc chắn không?"
   comment_updated: "Bình luận đã cập nhật thành công."
   comment_destroy: "Bình luận đã hủy thành công."
+  post_success_msg: "Bài viết đã được thêm thành công."
+  post_update_msg: "Bài viết đã được cập nhật thành công."
+  post_destroy_msg: "Bài viết đã được xóa thành công."
   views:
     pagination:
       previous: "&lt; Trước"
