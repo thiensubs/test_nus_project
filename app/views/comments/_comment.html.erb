@@ -1,6 +1,6 @@
 <div class="comment_sample">
   <span class="glyphicon glyphicon-tree-conifer"></span>
-  ----#<%= comment.id %> <small><%= t("created_at")%>: <%= comment.created_at %></small>--- by
+  ----#<%= comment.id %> <small><%= t(".created_at")%>: <%= comment.created_at %></small>--- by
   <span class="label label-default">
     <% unless comment.user_id.blank? %>
     <%  @user=User.find(comment.user_id)%>
@@ -10,16 +10,16 @@
     <% end %></span>
 
     <p>
-      <strong><%= t("title_comment") %></strong>
+      <strong><%= t(".title_comment") %></strong>
       <%= comment.title_comment %>
     </p>
     <p>
-      <strong><%= t("content_comment") %></strong>
+      <strong><%= t(".content_comment") %></strong>
       <%= comment.content_comment %>
     </p>
     <p>
       <span class="glyphicon glyphicon-fire"></span>
-      <%= link_to t("destroy_comment"), [comment.post, comment],
+      <%= link_to t(".destroy_comment"), [comment.post, comment],
       method: :delete, data: { confirm: I18n.t("sure") }%>
     </p>
    <%= t("last_time_visited") %>:<%= timeago_tag Time.zone.now, :nojs => true, :limit => 10.days.ago %>

@@ -2,16 +2,16 @@
 <%= form_for([@post, @post.comments.build], :remote => true) do |f| %>
 
 <p>
-  <%= f.label :title_comment, t("title_comment") %>
+  <%= f.label :title_comment, t(".title_comment") %>
   <%= f.text_field :title_comment, autofocus: true, class: "form-control" %>
 </p>
 <p>
-  <%= f.label :content_comment, t("content_comment") %>
+  <%= f.label :content_comment, t(".content_comment") %>
   <%= f.text_area :content_comment, class: "form-control", rows: "3" %>
 </p>
 
 <div class="actions">
-  <%= f.submit t("createcomment"), class: "btn btn-large btn-primary"  %>
+  <%= f.submit t(".createcomment"), class: "btn btn-large btn-primary"  %>
 </div>
 
 <% end %>

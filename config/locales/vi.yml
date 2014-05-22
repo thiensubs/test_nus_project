@@ -79,3 +79,21 @@ vi:
       truncate: "..."
       last: "Cuối"
       first: "Đầu"
+  posts:
+    form:
+      enter_text: "Nhập vào nội dung ..."
+      content: "Nội dung"
+      title: "Tiêu đề"
+  comments:
+    form:
+      title_comment: "Tiêu đề Bình luận"
+      content_comment: "Nội dung Bình luận"
+      createcomment: "Tạo bình luận"
+    comment:
+      title_comment: "Tiêu đề Bình luận"
+      content_comment: "Nội dung Bình luận"
+      destroy_comment: "Xóa Bình luận"
+      add_comment: "Thêm Bình luận"
+      created_at: "Tạo vào lúc"
+
+
