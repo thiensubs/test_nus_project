@@ -55,20 +55,16 @@
             <span class="icon-bar"></span>
           </button>
 
-            <% if I18n.locale == I18n.default_locale %>
-            <div class="navbar-toggle flag">
-            <%= link_to  locale: :vi do %>
-            <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "23px") %>
-             </div>
-            <% end %>
+          <% if I18n.locale == I18n.default_locale %>
+          <%= link_to url_for( :locale => 'vi' ), class: "navbar-toggle flag" do %>
+          <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "23px") %>
+          <% end %>
 
-            <% else %>
-            <div class="navbar-toggle flag">
-            <%= link_to  locale: :en  do %>
-            <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "23px") %>
-              </div>
-            <% end %>
-            <% end %>
+          <% else %>
+          <%= link_to  url_for( :locale => 'en' ), class: "navbar-toggle flag" do %>
+          <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "23px") %>
+          <% end %>
+          <% end %>
 
           <a href="/?locale=<%= I18n.locale %>" class="navbar-brand">Blog</a>
 
@@ -103,8 +99,7 @@
             </li>
             <% if I18n.locale == I18n.default_locale %>
             <li>
-
-              <%= link_to locale: :vi do %>
+              <%= link_to url_for( :locale => 'vi' ), class: "btn btn-small" do %>
               <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "25px") %>
               <%  %>
               <% end %>
@@ -112,7 +107,7 @@
             </li>
             <% else %>
             <li>
-              <%= link_to locale: :en do %>
+              <%= link_to url_for( :locale => 'en' ), class: "btn btn-small" do %>
               <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "25px") %>
               <% end %>
             </li>
