@@ -32,7 +32,7 @@ vi:
     formats:
       default: "%d-%m-%Y"
   time:
-    am: ""
+    am: "Sáng"
     formats:
       default: "%I:%M %p %d.%m.%y"
     pm: "Chiều"
