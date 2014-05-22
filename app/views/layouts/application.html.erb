@@ -78,7 +78,7 @@
             </li>
             <% if user_signed_in? %>
 
-            <li id="current_user" class="divider">
+            <li id="current_user" class="btn btn-small">
               <%=t("sign_msg", :email => current_user.email )%>
             </li>
 
@@ -93,26 +93,25 @@
             <li>
               <%= link_to t("sign_in"), new_user_session_path, class: "btn btn-small" %>
               <% end %>
-
-            </ul>
-            <ul class="nav navbar-nav navbar-right av-pills clearfinx">
             </li>
-            <% if I18n.locale == I18n.default_locale %>
-            <li>
-              <%= link_to url_for( :locale => 'vi' ), class: "btn btn-small" do %>
-              <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "25px") %>
-              <%  %>
-              <% end %>
-
-            </li>
-            <% else %>
-            <li>
-              <%= link_to url_for( :locale => 'en' ), class: "btn btn-small" do %>
-              <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "25px") %>
-              <% end %>
-            </li>
-            <% end %>
           </ul>
+          <ul class="nav navbar-nav navbar-right av-pills clearfinx">
+          </li>
+          <% if I18n.locale == I18n.default_locale %>
+          <li>
+            <%= link_to url_for( :locale => 'vi' ), class: "btn btn-small" do %>
+            <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "25px") %>
+            <%  %>
+            <% end %>
+          </li>
+          <% else %>
+          <li>
+            <%= link_to url_for( :locale => 'en' ), class: "btn btn-small" do %>
+            <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "25px") %>
+            <% end %>
+          </li>
+          <% end %>
+        </ul>
             <!-- <form class="navbar-form navbar-right">
               <input type="text" placeholder="Search..." class="form-control" title="Enter keyword(s) to find">
             </form> -->
