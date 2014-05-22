@@ -56,11 +56,11 @@
           </button>
 
             <% if I18n.locale == I18n.default_locale %>
-            <%= link_to ".."+request.path+"?locale=vi", class: "flag" do %>
+            <%= link_to ".."+request.path+"?locale=vi", class: "navbar-toggle flag" do %>
             <%= image_tag("/assets/vie.jpeg", :alt => "vie", :width => "23px") %>
             <% end %>
             <% else %>
-            <%= link_to ".."+request.path+"?locale=en", class: "flag"  do %>
+            <%= link_to ".."+request.path+"?locale=en", class: "navbar-toggle flag"  do %>
             <%= image_tag("/assets/eng.jpeg", :alt => "eng", :width => "23px") %>
             <% end %>
             <% end %>
