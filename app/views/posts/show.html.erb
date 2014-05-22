@@ -3,12 +3,12 @@
 <% if can? :update, @post %>
   <%= link_to edit_post_path(@post) do%>
   <span class="glyphicon glyphicon-pencil"></span>
-  <%= t("Edit")%>
+  <%= t("edit")%>
   <% end %> |
   <% end %>
   <%= link_to posts_path do %>
   <span class="glyphicon glyphicon-hand-left"></span>
-  <%= t("Back")%>
+  <%= t("back")%>
   <% end %>
 </div>
 <div id="content" class="panel panel-info">

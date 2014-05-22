@@ -27,17 +27,17 @@
             <div class="feedback">
               <%= post.comments.count %> <%= t("comment")%>
               <%= link_to post do %>
-              <button class="btn btn-info" type="button"><%= t("Show")%></button>
+              <button class="btn btn-info" type="button"><%= t("show")%></button>
               <% end %>
 
               <% if can? :update, post %>
               <%= link_to edit_post_path(post) do %>
-              <button class="btn btn-default" type="button"><%= t("Edit")%></button>
+              <button class="btn btn-default" type="button"><%= t("edit")%></button>
               <% end %>
               <% end %>
               <% if can? :destroy, post %>
-              <%= link_to post, method: :delete, data: {confirm: 'Are you sure?'} do %>
-              <button type="button" class="btn btn-danger"><%= t("Destroy")%></button>
+              <%= link_to post, method: :delete, data: {confirm: t("sure")} do %>
+              <button type="button" class="btn btn-danger"><%= t("destroy")%></button>
               <% end %>
 
               <% end %>

@@ -1,6 +1,6 @@
 <div class="comment_sample">
   <span class="glyphicon glyphicon-tree-conifer"></span>
-  ----#<%= comment.id %> <small><%= t("Created At")%>: <%= comment.created_at %></small>--- by
+  ----#<%= comment.id %> <small><%= t("created_at")%>: <%= comment.created_at %></small>--- by
   <span class="label label-default">
     <% unless comment.user_id.blank? %>
     <%  @user=User.find(comment.user_id)%>
