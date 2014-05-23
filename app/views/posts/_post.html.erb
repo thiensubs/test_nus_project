@@ -21,7 +21,7 @@
               <% end %>
             </div>
             <div class="storycontent">
-              <%= strip_tags(post.content).to_s.at(0..255) %> ...
+              <%= truncate_html(post.content, length: 255, omission: '...(continued)') %>
             </div>
 
             <div class="feedback">

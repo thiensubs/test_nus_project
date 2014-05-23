@@ -55,3 +55,4 @@ gem "cancan"
 gem "i18n-js"
 gem 'unicorn'
 gem 'jquery-turbolinks'
+gem 'truncate_html'
