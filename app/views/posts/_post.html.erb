@@ -8,7 +8,7 @@
 
            </h2>
            <div class="meta">
-            <%= t("posted")%> <%= l(post.created_at) %> <%= t("by")%>
+            <%= t(".posted")%> <%= l(post.created_at) %> <%= t("by")%>
             <% unless post.user_id.blank? %>
             <% unless User.find_by_id(post.user_id).blank?
               @user=User.find(post.user_id)
@@ -21,11 +21,11 @@
               <% end %>
             </div>
             <div class="storycontent">
-              <%= truncate_html(post.content, length: 255, omission: '...(continued)') %>
+              <%= truncate_html(post.content, length: 255, omission: t(".continued")) %>
             </div>
 
             <div class="feedback">
-              <%= post.comments.count %> <%= t("comment")%>
+              <%= post.comments.count %> <%= t(".comment")%>
               <%= link_to post do %>
               <button class="btn btn-info" type="button"><%= t("show")%></button>
               <% end %>

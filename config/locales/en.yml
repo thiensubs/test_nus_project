@@ -70,7 +70,6 @@ en:
   email_addres: "Please enter a valid email address."
   minlength: "Password can't not be less than: {0} character"
   enter_the_text: "Please enter the text"
-  posted: "Posted"
   new_post: "New Post"
   leave_blank: "leave blank if you don't want to change it"
   current_pass: "Current password"
@@ -102,6 +101,12 @@ en:
       title: "Title"
       comment: "Comment"
       has_no_comment: "No Comment, Please create your comment"
+    post:
+      content: "Content"
+      title: "Title"
+      comment: "Comment"
+      posted: "Posted"
+      continued: "...(continued)"
   comments:
     form:
       title_comment: "Title of Comment"

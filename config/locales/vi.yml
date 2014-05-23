@@ -88,6 +88,12 @@ vi:
       title: "Tiêu đề"
       comment: "Bình luận"
       has_no_comment: "Không có bình luận nào, Hãy tạo bình luận đầu tiên."
+    post:
+      content: "Nội dung"
+      title: "Tiêu đề"
+      comment: "Bình luận"
+      posted: "Tạo vào lúc"
+      continued: "...(Còn nữa)"
   comments:
     form:
       title_comment: "Tiêu đề Bình luận"
